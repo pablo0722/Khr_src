@@ -1,0 +1,3 @@
+[submodule "Egl_src"]
+	path = Egl_src
+	url = git@github.com:pablo0722/Egl_src.git
