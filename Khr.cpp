@@ -43,11 +43,15 @@
 
 #include "GLEngine/Khr/Khr.hpp"
 
-bool Khr::CreateSurfaceAndBindContext(EGLNativeDisplayType display, EGLNativeWindowType window, GLuint flags)
+bool Khr::CreateSurfaceAndBindContext(const char *title, int posx, int posy, int width, int height, GLuint flags)
 {
-   return egl.CreateSurfaceAndBindContext(display, window, flags);
+   return egl.CreateSurfaceAndBindContext(title, posx, posy, width, height, flags);
 }
 
 void Khr::swapBuffers() {
    egl.swapBuffers();
+}
+
+void Khr::getEvent(WindowEvent *event) const {
+    egl.getEvent(event);
 }
